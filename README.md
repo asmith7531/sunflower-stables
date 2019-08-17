@@ -1,1 +1,2 @@
-# sunflower-stables
+# react-boilerplate
+boilerplate for react apps
