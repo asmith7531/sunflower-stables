@@ -4291,6 +4291,11 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-awesome-button@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/react-awesome-button/-/react-awesome-button-6.1.2.tgz#72402cf5e4180fa90c88fe7c1dd8970e771e412f"
+  integrity sha512-pPpuH3c1RTGoZkcLzfhQ/1PVxc56XS69mDkI8qRtRY7/cD7z+YKYFEzUk0IAg5m8l/Uwro97TqCDLvJJUMl1MQ==
+
 react-dom@^16.8.6:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"

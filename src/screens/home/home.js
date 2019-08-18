@@ -1,6 +1,11 @@
 import React, { Component, useCallback } from "react";
 import NavBar from "../../components/navBar/navBar";
-
+import {
+  AwesomeButton,
+  AwesomeButtonProgress,
+  AwesomeButtonSocial
+} from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 import {
   Container,
   Header,
@@ -55,34 +60,13 @@ export default class home extends Component {
           </Container>
           <Container style={{ minHeight: "20em" }} />
           <Container textAlign="center">
-            <Button
-              size="large"
-              rounded={true}
-              type="button"
-              onClick={() => handleClick(about)}
-              animated="vertical"
-            >
-              <Button.Content hidden>About Us</Button.Content>
-              <Button.Content visible>
-                <Icon name="arrow down" />
-              </Button.Content>
-            </Button>
+            <AwesomeButton type="primary" action={() => handleClick(about)}>
+              About
+            </AwesomeButton>
           </Container>
         </div>
         <Segment style={{ padding: "4em 0em" }} vertical>
-          <Container textAlign="center">
-            <Button
-              rounded={true}
-              type="button"
-              onClick={() => handleClick(top)}
-              animated="vertical"
-            >
-              <Button.Content hidden>Top</Button.Content>
-              <Button.Content visible>
-                <Icon name="arrow up" />
-              </Button.Content>
-            </Button>
-          </Container>
+          <Container textAlign="center" />
           <Grid container stackable verticalAlign="middle">
             <Grid.Row>
               <Grid.Column width={8}>

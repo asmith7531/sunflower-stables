@@ -1,28 +1,34 @@
 import React, { Component } from "react";
 import { Grid, Menu, Segment } from "semantic-ui-react";
+import Lessons from "./lessons";
+import ForSale from "./forsale";
+import Boarding from "./boarding";
 export default class services extends Component {
   state = { activeItem: "Lessons" };
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
   render() {
-    const { activeItem } = this.state;
+    const activeItem = this.state;
+    console.log(this.state.activeItem);
     return (
       <div>
         <Grid>
-          <Grid.Column width={4}>
+          <Grid.Column width={3}>
             <Menu fluid vertical tabular>
               <Menu.Item
                 name="Lessons"
-                active={activeItem === "bio"}
+                active={activeItem.activeItem === "Lessons"}
                 onClick={this.handleItemClick}
-              />
+              >
+                Riding Lessons
+              </Menu.Item>
               <Menu.Item
                 name="Boarding"
-                active={activeItem === "pics"}
+                active={activeItem.activeItem === "Boarding"}
                 onClick={this.handleItemClick}
               />
               <Menu.Item
-                name="For Sale"
-                active={activeItem === "companies"}
+                name="ForSale"
+                active={activeItem.activeItem === "ForSale"}
                 onClick={this.handleItemClick}
               />
             </Menu>
@@ -32,6 +38,13 @@ export default class services extends Component {
             <Segment>
               This is an stretched grid column. This segment will always match
               the tab height
+              {activeItem.activeItem === "Lessons"
+                ? Lessons
+                : activeItem.activeItem === ForSale
+                ? "ForSale"
+                : activeItem.activeItem === Boarding
+                ? "Boarding"
+                : null}
             </Segment>
           </Grid.Column>
         </Grid>
