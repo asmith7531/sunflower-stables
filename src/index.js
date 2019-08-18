@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./screens/home/home";
+import App from "./app.js";
 const Index = () => {
-  return (
-    <>
-      <Home />
-    </>
-  );
+  return <App />;
 };
 ReactDOM.render(<Index />, document.getElementById("root"));
