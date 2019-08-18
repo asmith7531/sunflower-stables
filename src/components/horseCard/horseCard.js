@@ -9,7 +9,6 @@ export default class horseCard extends Component {
       description: props.description
     };
   }
-
   render() {
     const activeState = this.state;
     return (

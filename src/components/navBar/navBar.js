@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
 import Sunflower from "../../../dist/7ca8a91d64dbfb901833a07aabfc2adc.png";
 export default class navBar extends Component {
-  state = {
-    activeItem: ""
-  };
+  state = { activeItem: "home" };
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
@@ -13,37 +11,46 @@ export default class navBar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Menu stackable>
+      <Menu pointing stackable>
         <Menu.Item as={Link} to="/">
           <img src={Sunflower} />
         </Menu.Item>
 
         <Menu.Item
+          onClick={this.handleItemClick}
+          active={activeItem === "home"}
+          name="home"
           as={Link}
           to="/"
-          name="home"
-          active={activeItem === "home"}
-          onClick={this.handleItemClick}
         >
           Home
         </Menu.Item>
         <Menu.Item
-          as={Link}
-          to="horses"
-          name="horses"
-          active={activeItem === "horses"}
           onClick={this.handleItemClick}
+          active={activeItem === "horses"}
+          name="horses"
+          as={Link}
+          to="/horses"
         >
           Meet The Horses
         </Menu.Item>
         <Menu.Item
-          as={Link}
-          to="lessons"
-          name="lessons"
-          active={activeItem === "lessons"}
           onClick={this.handleItemClick}
+          active={activeItem === "services"}
+          name="services"
+          as={Link}
+          to="/services"
         >
-          Lessons
+          Services
+        </Menu.Item>
+        <Menu.Item
+          onClick={this.handleItemClick}
+          active={activeItem === "contact-us"}
+          name="contact-us"
+          as={Link}
+          to="/contact-us"
+        >
+          Contact Us
         </Menu.Item>
       </Menu>
     );

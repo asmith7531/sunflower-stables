@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import NavBar from "../../components/navBar/navBar";
+import Sunflower from "../../../dist/7ca8a91d64dbfb901833a07aabfc2adc.png";
 import {
   Segment,
   Form,
@@ -6,7 +8,8 @@ import {
   Container,
   Button,
   Select,
-  TextArea
+  TextArea,
+  Header
 } from "semantic-ui-react";
 export default class lessons extends Component {
   render() {
@@ -17,11 +20,35 @@ export default class lessons extends Component {
       { text: "Western", value: "Western" },
       { text: "Kids", value: "Kids" }
     ];
-
     return (
-      <>
+      <div>
+        <NavBar />
+        <Container className="main">
+          <Header
+            as="h1"
+            className="header"
+            style={{
+              fontSize: "4em",
+              fontWeight: "normal",
+              marginBottom: "2em 0em",
+              marginTop: "2em 0em",
+              display: "inline"
+            }}
+          >
+            <div>
+              C
+              <span>
+                <img
+                  src={Sunflower}
+                  style={{ paddingTop: "2em 0em", maxHeight: "0.5em" }}
+                />
+              </span>
+              ntact Us
+            </div>
+          </Header>
+        </Container>
         <Container>
-          <Segment raised="true">
+          <Segment raised={true}>
             <Form>
               <Form.Group widths="equal">
                 <Form.Field
@@ -47,7 +74,7 @@ export default class lessons extends Component {
                 <Form.Select
                   id="type"
                   control={Select}
-                  label="Class"
+                  label="What are you interested in?"
                   placeholder="Class"
                   options={options}
                 />
@@ -67,7 +94,7 @@ export default class lessons extends Component {
             </Form>
           </Segment>
         </Container>
-      </>
+      </div>
     );
   }
 }
