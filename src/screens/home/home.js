@@ -25,7 +25,7 @@ export default class home extends Component {
                 <span>
                   <img
                     src={Sunflower}
-                    style={{ paddingTop: "2em 0em", maxHeight: "1em" }}
+                    style={{ paddingTop: "2em 0em", maxHeight: "0.5em" }}
                   />
                 </span>
                 wer Stables
