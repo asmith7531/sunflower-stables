@@ -40,10 +40,8 @@ export default class home extends Component {
                     style={{ paddingTop: "2em 0em", maxHeight: "0.5em" }}
                   />
                 </span>
-                wer
-                <em>
-                  <h1 className="small">Stables</h1>
-                </em>
+                wer Stables
+                <em>{/* <h1 className="small">Stables</h1> */}</em>
               </div>
             </Header>
           </Container>
@@ -105,14 +103,17 @@ export default class home extends Component {
                   Train Hard
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
-                  We don't horse around, we take this to the next level.
+                  Rigorous blah blah blah blah blah Ill write something here
+                  later
                 </p>
                 <Header as="h3" style={{ fontSize: "2em" }}>
-                  Boarding, Sales, and Lessons
+                  Competition Breeds Character
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
-                  We do a little of everything. But showing off our skills at
-                  horse shows is what we love most.
+                  And even though winning is great e are dedicated to good
+                  horsemanship and personal growth above all else. You will
+                  leave feeling like you have accomplished something you can be
+                  proud of.
                 </p>
               </Grid.Column>
             </Grid.Row>

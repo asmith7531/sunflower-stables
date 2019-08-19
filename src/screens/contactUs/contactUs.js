@@ -1,18 +1,13 @@
 import React, { Component } from "react";
+import axios from "axios";
 import NavBar from "../../components/navBar/navBar";
 import Sunflower from "../../../dist/7ca8a91d64dbfb901833a07aabfc2adc.png";
-import {
-  AwesomeButton,
-  AwesomeButtonProgress,
-  AwesomeButtonSocial
-} from "react-awesome-button";
-import "react-awesome-button/dist/styles.css";
+import { AwesomeButton } from "react-awesome-button";
 import {
   Segment,
   Form,
   Input,
   Container,
-  Button,
   Select,
   TextArea,
   Header,
@@ -23,13 +18,47 @@ import Horse from "../../../dist/img/nayyy.jpg";
 export default class lessons extends Component {
   render() {
     const options = [
-      { text: "Cross Country", value: "Cross Country" },
-      { text: "Dressage", value: "Dressage" },
-      { text: "Hunter Jumper", value: "Hunter Jumper" },
-      { text: "Western", value: "Western" },
-      { text: "Kids", value: "Kids" },
-      { text: "Summer Camp", value: "Summer Camp" }
+      { text: "Boarding", value: "Boarding" },
+      { text: "Cross Country Lessons", value: "Cross Country" },
+      { text: "Dressage Lessons", value: "Dressage" },
+      { text: "Hunter Jumper Lessons", value: "Hunter Jumper" },
+      { text: "Kids Classes", value: "Kids Classes" },
+      { text: "Summer Camp", value: "Summer Camp" },
+      { text: "Buying a Horse", value: "Buying a Horse" }
     ];
+    function handleSubmit(e) {
+      e.preventDefault();
+      const firstName = document.getElementById("form-input-control-first-name")
+        .value;
+      const lastName = document.getElementById("form-input-control-last-name")
+        .value;
+      const email = document.getElementById("form-input-control-email").value;
+      const lesson = document.getElementById("form-input-control-class").value;
+      const comments = document.getElementById("form-input-control-comments")
+        .value;
+      axios({
+        method: "POST",
+        url: "http://localhost:3000/api/contact-us",
+        data: {
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+          interest: lesson,
+          messsage: comments
+        }
+      }).then(response => {
+        if (response.data.msg === "success") {
+          alert("Message Sent.");
+          this.resetForm();
+        } else if (response.data.msg === "fail") {
+          alert("Message failed to send.");
+        }
+      });
+      resetForm();
+    }
+    function resetForm() {
+      document.getElementById("contact-form").reset();
+    }
     return (
       <div>
         <NavBar />
@@ -62,7 +91,7 @@ export default class lessons extends Component {
               </Container>
               <Container>
                 <Segment raised={true}>
-                  <Form>
+                  <Form id="contact-form">
                     <Form.Group widths="equal">
                       <Form.Field
                         id="form-input-control-first-name"
@@ -85,7 +114,7 @@ export default class lessons extends Component {
                         id={{ id: "form-input-control-email" }}
                       />
                       <Form.Select
-                        id="type"
+                        id="form-input-control-class"
                         control={Select}
                         label="What are you interested in?"
                         placeholder="Class"
@@ -93,16 +122,14 @@ export default class lessons extends Component {
                       />
                     </Form.Group>
                     <Form.Field
+                      id="form-input-control-questions"
                       placeholder="Questions/Comments"
                       control={TextArea}
                       label="Questions/Comments"
                     />
                     <br />
                     <br />
-                    <AwesomeButton
-                      type="primary"
-                      action={() => handleClick(top)}
-                    >
+                    <AwesomeButton type="submit" action={() => handleSubmit()}>
                       Submit
                     </AwesomeButton>
                   </Form>

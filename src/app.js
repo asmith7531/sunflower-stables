@@ -18,8 +18,8 @@ export default class App extends Component {
             <Route path="/contact-us" component={ContactUs} />
             <Route path="/services" component={Services} />
           </Responsive>
+          <Footer />
         </div>
-        <Footer />
       </Router>
     );
   }
