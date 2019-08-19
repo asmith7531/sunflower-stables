@@ -1,14 +1,27 @@
 var express = require("express");
-const app = express();
 var router = express.Router();
-const axios = require("axios");
-const db = require("../models/contactUs");
+var nodemailer = require("nodemailer");
+const creds = require("../src/config");
 
-app.get("/api", function(req, res) {
-  res.send("API home page");
+var transport = {
+  host: "smtp.gmail.com",
+  auth: {
+    user: creds.USER,
+    pass: creds.PASS
+  }
+};
+
+var transporter = nodemailer.createTransport(transport);
+
+transporter.verify((error, success) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log("Server is ready to take messages");
+  }
 });
 
-router.post("/api/contact-me", (req, res, next) => {
+router.post("/send", (req, res, next) => {
   var name = req.body.name;
   var email = req.body.email;
   var message = req.body.message;
@@ -16,7 +29,7 @@ router.post("/api/contact-me", (req, res, next) => {
 
   var mail = {
     from: name,
-    to: "austinsmith7531@gmail.com",
+    to: "austinsmith7531@gmail.com", //Change to email address that you want to receive messages on
     subject: "New Message from Contact Form",
     text: content
   };
@@ -33,3 +46,5 @@ router.post("/api/contact-me", (req, res, next) => {
     }
   });
 });
+
+module.exports = router;
