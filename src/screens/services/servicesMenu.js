@@ -36,15 +36,13 @@ export default class services extends Component {
 
           <Grid.Column stretched width={12}>
             <Segment>
-              This is an stretched grid column. This segment will always match
-              the tab height
-              {activeItem.activeItem === "Lessons"
-                ? Lessons
-                : activeItem.activeItem === ForSale
-                ? "ForSale"
-                : activeItem.activeItem === Boarding
-                ? "Boarding"
-                : null}
+              {activeItem.activeItem === "Lessons" ? (
+                <Lessons />
+              ) : activeItem.activeItem === "ForSale" ? (
+                <ForSale />
+              ) : activeItem.activeItem === "Boarding" ? (
+                <Boarding />
+              ) : null}
             </Segment>
           </Grid.Column>
         </Grid>

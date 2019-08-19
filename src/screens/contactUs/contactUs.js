@@ -27,7 +27,8 @@ export default class lessons extends Component {
       { text: "Dressage", value: "Dressage" },
       { text: "Hunter Jumper", value: "Hunter Jumper" },
       { text: "Western", value: "Western" },
-      { text: "Kids", value: "Kids" }
+      { text: "Kids", value: "Kids" },
+      { text: "Summer Camp", value: "Summer Camp" }
     ];
     return (
       <div>
@@ -102,7 +103,7 @@ export default class lessons extends Component {
                       type="primary"
                       action={() => handleClick(top)}
                     >
-                      About
+                      Submit
                     </AwesomeButton>
                   </Form>
                 </Segment>

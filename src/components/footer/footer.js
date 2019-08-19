@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import { Container, Grid, Header, List } from "semantic-ui-react";
+import { AwesomeButton, AwesomeButtonSocial } from "react-awesome-button";
 import "./style.css";
 export default class footer extends Component {
   render() {
     return (
       <>
-        <div className="this top">
+        <div className="top">
           <Grid divided inverted={true} stackable>
             <Grid.Row>
               <Grid.Column width={3}>
@@ -30,10 +31,9 @@ export default class footer extends Component {
                 <Header as="h4" inverted>
                   Footer Header
                 </Header>
-                <p>
-                  Extra space for a call to action inside the footer that could
-                  help re-engage users.
-                </p>
+                <AwesomeButton type="facebook">FaceBook</AwesomeButton>
+                <AwesomeButton type="instagram">Instagram</AwesomeButton>
+                <AwesomeButton type="twitter">Share</AwesomeButton>
               </Grid.Column>
             </Grid.Row>
           </Grid>

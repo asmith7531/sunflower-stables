@@ -1,23 +1,12 @@
 import React, { Component, useCallback } from "react";
 import NavBar from "../../components/navBar/navBar";
-import {
-  AwesomeButton,
-  AwesomeButtonProgress,
-  AwesomeButtonSocial
-} from "react-awesome-button";
+import { AwesomeButton, AwesomeButtonSocial } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
-import {
-  Container,
-  Header,
-  Segment,
-  Grid,
-  Button,
-  Image,
-  Icon
-} from "semantic-ui-react";
+import { Container, Header, Segment, Grid, Image } from "semantic-ui-react";
 import "./style.css";
 import Sunflower from "../../../dist/7ca8a91d64dbfb901833a07aabfc2adc.png";
 import HorseMouth from "../../../dist/img/horsemouth.jpg";
+import Competitor from "../../../dist/img/competitor.jpg";
 
 export default class home extends Component {
   render() {
@@ -43,7 +32,7 @@ export default class home extends Component {
                 display: "inline"
               }}
             >
-              <div textAlign="left" className="title">
+              <div className="title">
                 Sunfl
                 <span id="top">
                   <img
@@ -74,14 +63,15 @@ export default class home extends Component {
                   Passion is Everything
                 </Header>
                 <p id="about" style={{ fontSize: "1.33em" }}>
-                  We don't horse around, we take this to the next level.
+                  And we don't horse around, we take this to the next level.
                 </p>
                 <Header as="h3" style={{ fontSize: "2em" }}>
                   Boarding, Sales, and Lessons
                 </Header>
                 <p style={{ fontSize: "1.33em" }}>
-                  We do a little of everything. But showing off our skills at
-                  horse shows is what we love most.
+                  We do a little of everything: boarding, lessons, and sales;
+                  but showing off our skills in horse shows is what we love
+                  most.
                 </p>
               </Grid.Column>
               <Grid.Column floated="right" width={6}>
@@ -94,11 +84,39 @@ export default class home extends Component {
                 />
               </Grid.Column>
             </Grid.Row>
+          </Grid>
+        </Segment>
+
+        <Segment style={{ padding: "4em 0em" }} vertical>
+          <Container textAlign="center" />
+          <Grid container stackable verticalAlign="middle">
             <Grid.Row>
-              <Grid.Column textAlign="center">
-                <Button size="huge">Check Them Out</Button>
+              <Grid.Column floated="left" width={6}>
+                <Image
+                  bordered={true}
+                  rounded={true}
+                  size="large"
+                  src={Competitor}
+                  alt="Competitor"
+                />
+              </Grid.Column>
+              <Grid.Column width={8}>
+                <Header as="h3" style={{ fontSize: "2em" }}>
+                  Train Hard
+                </Header>
+                <p style={{ fontSize: "1.33em" }}>
+                  We don't horse around, we take this to the next level.
+                </p>
+                <Header as="h3" style={{ fontSize: "2em" }}>
+                  Boarding, Sales, and Lessons
+                </Header>
+                <p style={{ fontSize: "1.33em" }}>
+                  We do a little of everything. But showing off our skills at
+                  horse shows is what we love most.
+                </p>
               </Grid.Column>
             </Grid.Row>
+            <Grid.Row />
           </Grid>
         </Segment>
       </>
