@@ -3,6 +3,7 @@ import axios from "axios";
 import NavBar from "../../components/navBar/navBar";
 import Sunflower from "../../../dist/7ca8a91d64dbfb901833a07aabfc2adc.png";
 import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
 import {
   Segment,
   Form,
@@ -16,6 +17,39 @@ import {
 } from "semantic-ui-react";
 import Horse from "../../../dist/img/nayyy.jpg";
 export default class lessons extends Component {
+  resetForm() {
+    document.getElementById("contact-form").reset();
+  }
+  handleSubmit(e) {
+    e.preventDefault();
+    const firstName = document.getElementById("form-input-control-first-name")
+      .value;
+    console.log(firstName);
+    const lastName = document.getElementById("form-input-control-last-name")
+      .value;
+    const email = document.getElementById("form-input-control-email").value;
+    const lesson = document.getElementById("form-input-control-class").value;
+    const comments = document.getElementById("form-input-control-questions")
+      .value;
+    axios
+      .post("http://localhost:3001/api/send", {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        interest: lesson,
+        message: comments
+      })
+      .then(response => {
+        if (response.data.msg === "success") {
+          alert("Message Sent.");
+          this.resetForm();
+        } else if (response.data.msg === "fail") {
+          alert("Message failed to send.");
+        }
+      });
+    this.resetForm();
+  }
+
   render() {
     const options = [
       { text: "Boarding", value: "Boarding" },
@@ -26,39 +60,7 @@ export default class lessons extends Component {
       { text: "Summer Camp", value: "Summer Camp" },
       { text: "Buying a Horse", value: "Buying a Horse" }
     ];
-    function handleSubmit(e) {
-      e.preventDefault();
-      const firstName = document.getElementById("form-input-control-first-name")
-        .value;
-      const lastName = document.getElementById("form-input-control-last-name")
-        .value;
-      const email = document.getElementById("form-input-control-email").value;
-      const lesson = document.getElementById("form-input-control-class").value;
-      const comments = document.getElementById("form-input-control-comments")
-        .value;
-      axios({
-        method: "POST",
-        url: "http://localhost:3000/api/contact-us",
-        data: {
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-          interest: lesson,
-          messsage: comments
-        }
-      }).then(response => {
-        if (response.data.msg === "success") {
-          alert("Message Sent.");
-          this.resetForm();
-        } else if (response.data.msg === "fail") {
-          alert("Message failed to send.");
-        }
-      });
-      resetForm();
-    }
-    function resetForm() {
-      document.getElementById("contact-form").reset();
-    }
+
     return (
       <div>
         <NavBar />
@@ -91,16 +93,22 @@ export default class lessons extends Component {
               </Container>
               <Container>
                 <Segment raised={true}>
-                  <Form id="contact-form">
+                  <Form
+                    id="contact-form"
+                    onSubmit={this.handleSubmit.bind(this)}
+                    // method="POST"
+                  >
                     <Form.Group widths="equal">
                       <Form.Field
                         id="form-input-control-first-name"
+                        name="firstName"
                         control={Input}
                         label="First name"
                         placeholder="First name"
                       />
                       <Form.Field
                         id="form-input-control-last-name"
+                        name="lastName"
                         control={Input}
                         label="Last name"
                         placeholder="Last name"
@@ -109,12 +117,14 @@ export default class lessons extends Component {
                     <Form.Group widths="equal">
                       <Form.Field
                         placeholder="@Email"
+                        name="email"
                         control={Input}
                         label="Email"
-                        id={{ id: "form-input-control-email" }}
+                        id="form-input-control-email"
                       />
                       <Form.Select
                         id="form-input-control-class"
+                        name="interest"
                         control={Select}
                         label="What are you interested in?"
                         placeholder="Class"
@@ -123,13 +133,18 @@ export default class lessons extends Component {
                     </Form.Group>
                     <Form.Field
                       id="form-input-control-questions"
+                      name="questions"
                       placeholder="Questions/Comments"
                       control={TextArea}
                       label="Questions/Comments"
                     />
                     <br />
                     <br />
-                    <AwesomeButton type="submit" action={() => handleSubmit()}>
+
+                    <AwesomeButton
+                      type="primary"
+                      onPress={() => this.handleSubmit}
+                    >
                       Submit
                     </AwesomeButton>
                   </Form>
