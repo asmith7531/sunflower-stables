@@ -3,7 +3,7 @@ import { Header, Container } from "semantic-ui-react";
 export default class lessons extends Component {
   render() {
     return (
-      <Container textAlign="left">
+      <>
         <Header as="h1">Horseback Riding Lessons</Header>
         Learn equestrian skills from Meagan Smith, the leader behind Sunflower
         Stables. Meagan has spent years working hard competing in hunter jumper
@@ -17,7 +17,7 @@ export default class lessons extends Component {
           <li>Group Lessons - $25</li>
           <li>Private Lessons - $35</li>
         </ul>
-      </Container>
+      </>
     );
   }
 }

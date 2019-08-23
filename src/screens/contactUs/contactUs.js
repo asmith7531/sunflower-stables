@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import NavBar from "../../components/navBar/navBar";
 import Sunflower from "../../../dist/img/sunflower.png";
-import Horse from "../../../dist/img/nayyy.jpg";
+import Horse from "../../../dist/img/horsemouth.jpg";
 import { AwesomeButton } from "react-awesome-button";
 import Footer from "../../components/footer/footer";
 import "react-awesome-button/dist/styles.css";

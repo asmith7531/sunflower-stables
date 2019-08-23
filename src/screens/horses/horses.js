@@ -3,7 +3,7 @@ import NavBar from "../../components/navBar/navBar";
 import Horse from "../../components/horseCard/horseCard";
 import Leo from "../../../dist/img/FullSizeRender.jpeg";
 import Chico from "../../../dist/img/chico.jpeg";
-import Nigel from "../../../dist/img/nigel.jpeg";
+import Nigel from "../../../dist/img/nigel.jpg";
 import Bella from "../../../dist/img/Bella.jpg";
 import { Container, Grid, Header } from "semantic-ui-react";
 import Sunflower from "../../../dist/img/sunflower.png";
