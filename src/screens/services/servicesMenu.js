@@ -13,7 +13,7 @@ export default class services extends Component {
       <div>
         <Grid>
           <Grid.Column width={3}>
-            <Menu fluid vertical tabular>
+            <Menu fluid vertical tabular stackable>
               <Menu.Item
                 name="Lessons"
                 active={activeItem.activeItem === "Lessons"}
@@ -33,7 +33,6 @@ export default class services extends Component {
               />
             </Menu>
           </Grid.Column>
-
           <Grid.Column stretched width={12}>
             <Segment>
               {activeItem.activeItem === "Lessons" ? (

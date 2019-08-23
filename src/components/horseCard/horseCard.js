@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Card } from "semantic-ui-react";
+import { Card, Image } from "semantic-ui-react";
 export default class horseCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      img: props.img,
       name: props.name,
       breed: props.breed,
       description: props.description
@@ -12,14 +13,23 @@ export default class horseCard extends Component {
   render() {
     const activeState = this.state;
     return (
-      <div>
-        <Card
-          link
-          header={activeState.name}
-          meta={activeState.breed}
-          description={activeState.description}
-        />
-      </div>
+      <Card
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "2%"
+        }}
+      >
+        <Image src={activeState.img} wrapped ui={false} />
+        <Card.Content>
+          <Card.Header>{activeState.name}</Card.Header>
+          <Card.Meta>
+            <span className="date">{activeState.breed}</span>
+          </Card.Meta>
+          <Card.Description>{activeState.description}</Card.Description>
+        </Card.Content>
+      </Card>
     );
   }
 }

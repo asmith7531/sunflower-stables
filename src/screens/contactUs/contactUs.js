@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 import NavBar from "../../components/navBar/navBar";
-import Sunflower from "../../../dist/7ca8a91d64dbfb901833a07aabfc2adc.png";
+import Sunflower from "../../../dist/img/sunflower.png";
+import Horse from "../../../dist/img/nayyy.jpg";
 import { AwesomeButton } from "react-awesome-button";
 import "react-awesome-button/dist/styles.css";
 import {
@@ -15,7 +16,6 @@ import {
   Grid,
   Image
 } from "semantic-ui-react";
-import Horse from "../../../dist/img/nayyy.jpg";
 export default class lessons extends Component {
   resetForm() {
     document.getElementById("contact-form").reset();
@@ -49,25 +49,22 @@ export default class lessons extends Component {
       });
     this.resetForm();
   }
-
   render() {
     const options = [
       { text: "Boarding", value: "Boarding" },
+      { text: "Buying a Horse", value: "Buying a Horse" },
       { text: "Cross Country Lessons", value: "Cross Country" },
-      { text: "Dressage Lessons", value: "Dressage" },
       { text: "Hunter Jumper Lessons", value: "Hunter Jumper" },
-      { text: "Kids Classes", value: "Kids Classes" },
-      { text: "Summer Camp", value: "Summer Camp" },
-      { text: "Buying a Horse", value: "Buying a Horse" }
+      { text: "Group Classes", value: "Group Classes" },
+      { text: "Summer Camp", value: "Summer Camp" }
     ];
-
     return (
       <div>
         <NavBar />
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>
-              <Container className="main">
+              <Container>
                 <Header
                   as="h1"
                   className="header"

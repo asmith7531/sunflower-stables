@@ -1,44 +1,72 @@
 import React, { Component } from "react";
-import { Container, Grid, Header, List } from "semantic-ui-react";
-// import { AwesomeButton, AwesomeButtonSocial } from "react-awesome-button";
-import "./style.css";
+import {
+  Container,
+  Segment,
+  Header,
+  Grid,
+  List,
+  Divider,
+  Image
+} from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import Sunflower from "../../../dist/img/sunflower.png";
 export default class footer extends Component {
   render() {
     return (
-      <>
-        <Container className="top">
-          <Grid divided inverted={true} stackable>
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <Header inverted as="h4" content="About" />
-                <List link inverted>
-                  <List.Item as="a">Sitemap</List.Item>
-                  <List.Item as="a">Contact Us</List.Item>
-                  <List.Item as="a">Religious Ceremonies</List.Item>
-                  <List.Item as="a">Gazebo Plans</List.Item>
-                </List>
-              </Grid.Column>
-              <Grid.Column width={3}>
-                <Header inverted as="h4" content="Services" />
-                <List link inverted>
-                  <List.Item as="a">Banana Pre-Order</List.Item>
-                  <List.Item as="a">DNA FAQ</List.Item>
-                  <List.Item as="a">How To Access</List.Item>
-                  <List.Item as="a">Favorite X-Men</List.Item>
-                </List>
-              </Grid.Column>
-              <Grid.Column width={7}>
-                <Header as="h4" inverted>
-                  Footer Header
-                </Header>
-                {/* <AwesomeButton type="facebook">FaceBook</AwesomeButton>
-                <AwesomeButton type="instagram">Instagram</AwesomeButton>
-                <AwesomeButton type="twitter">Share</AwesomeButton> */}
-              </Grid.Column>
-            </Grid.Row>
+      <Segment
+        inverted
+        vertical
+        style={{ margin: "5em 0em 0em", padding: "5em 0em" }}
+      >
+        <Container textAlign="center">
+          <Grid divided inverted stackable>
+            <Grid.Column width={3}>
+              <Header inverted as="h4" content="More" />
+              <List link inverted>
+                <List.Item as="a">Link One</List.Item>
+                <List.Item as="a">Link Two</List.Item>
+                <List.Item as="a">Link Three</List.Item>
+                <List.Item as="a">Link Four</List.Item>
+              </List>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Header inverted as="h4" content="Group 2" />
+              <List link inverted>
+                <List.Item as="a">Link One</List.Item>
+                <List.Item as="a">Link Two</List.Item>
+                <List.Item as="a">Link Three</List.Item>
+                <List.Item as="a">Link Four</List.Item>
+              </List>
+            </Grid.Column>
+            <Grid.Column width={3}>
+              <Header inverted as="h4" content="Group 3" />
+              <List link inverted>
+                <List.Item as="a">Link One</List.Item>
+                <List.Item as="a">Link Two</List.Item>
+                <List.Item as="a">Link Three</List.Item>
+                <List.Item as="a">Link Four</List.Item>
+              </List>
+            </Grid.Column>
+            <Grid.Column width={7}>
+              <Header inverted as="h4" content="Social Media" />
+              <p>This is where I will link all of the social media accounts.</p>
+            </Grid.Column>
           </Grid>
+          <Divider inverted section />
+          <Image centered size="mini" src={Sunflower} />
+          <List horizontal inverted divided link size="small">
+            <List.Item as={Link} to="/contact-us">
+              Contact Us
+            </List.Item>
+            <List.Item as="a" href="#">
+              Terms and Conditions
+            </List.Item>
+            <List.Item as="a" href="#">
+              Privacy Policy
+            </List.Item>
+          </List>
         </Container>
-      </>
+      </Segment>
     );
   }
 }

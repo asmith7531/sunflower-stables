@@ -1,23 +1,20 @@
 header {
   font-size: 5em !important;
   margin-bottom: 0 !important;
-  margin-top: 3em !important;
+  align-content: center;
 }
 .landing-image {
-  background-image: url("../../../dist/img/gene-devine-YwjY-8Ivag4-unsplash.jpg") !important;
+  background-image: url("../../../dist/img/winter.png") !important;
   background-size: cover !important;
   min-height: 100vh;
 }
 .small {
   font-family: "Libre Baskerville" !important;
-  font-size: 0.5em !important;
+  font-size: 2em !important;
 }
 .big {
-  font-family: "Vollkorn", serif !important;
+  font-family: "Raleway", sans-serif !important;
 }
 p {
   font-size: "1.33em" !important;
-}
-h3.subtitle {
-  font-size: "4em" !important;
 }
