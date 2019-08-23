@@ -165,7 +165,7 @@ export default class home extends Component {
             </ParallaxLayer>
           </Segment>
           <ParallaxLayer
-            offset={2.8}
+            offset={2.5}
             style={{
               display: "flex",
               alignItems: "center",
@@ -199,7 +199,7 @@ export default class home extends Component {
               <Grid.Row />
             </Grid>
           </ParallaxLayer>
-          <ParallaxLayer offset={3.2} speed={0.1}>
+          <ParallaxLayer offset={3.1} speed={0.1}>
             <Footer />
           </ParallaxLayer>
         </Parallax>
