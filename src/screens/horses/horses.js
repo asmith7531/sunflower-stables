@@ -3,6 +3,7 @@ import NavBar from "../../components/navBar/navBar";
 import Horse from "../../components/horseCard/horseCard";
 import Leo from "../../../dist/img/FullSizeRender.jpeg";
 import Chico from "../../../dist/img/chico.jpeg";
+import Nigel from "../../../dist/img/nigel.jpeg";
 import Bella from "../../../dist/img/Bella.jpg";
 import { Container, Grid, Header } from "semantic-ui-react";
 import Sunflower from "../../../dist/img/sunflower.png";
@@ -57,7 +58,12 @@ export default class horses extends Component {
               breed="Wait, that's no horse!"
               description="Leo is the latest addition to Sunflower Farms. His favorite food is peanut butter, his biggest pet peeve is the vacuum, and he likes long walks on the beach."
             />
-            <Horse name="Nigel" breed="" description="" />
+            <Horse
+              img={Nigel}
+              name="Nigel"
+              breed="Registered Quarter Horse"
+              description="Nigel is a beautiful quarter horse standing at 14.4 hands. He is 4 years old, so green but very even tempered. An amatuer riders can  easily ride him. He is registered with the AQHA."
+            />
           </Grid>
         </Container>
       </div>

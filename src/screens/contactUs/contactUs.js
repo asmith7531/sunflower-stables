@@ -4,6 +4,7 @@ import NavBar from "../../components/navBar/navBar";
 import Sunflower from "../../../dist/img/sunflower.png";
 import Horse from "../../../dist/img/nayyy.jpg";
 import { AwesomeButton } from "react-awesome-button";
+import Footer from "../../components/footer/footer";
 import "react-awesome-button/dist/styles.css";
 import {
   Segment,
@@ -16,6 +17,7 @@ import {
   Grid,
   Image
 } from "semantic-ui-react";
+import "./style.css";
 export default class lessons extends Component {
   resetForm() {
     document.getElementById("contact-form").reset();
@@ -59,7 +61,7 @@ export default class lessons extends Component {
       { text: "Summer Camp", value: "Summer Camp" }
     ];
     return (
-      <div>
+      <>
         <NavBar />
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
@@ -80,6 +82,7 @@ export default class lessons extends Component {
                     C
                     <span>
                       <img
+                        id="sunflower"
                         src={Sunflower}
                         style={{ paddingTop: "2em 0em", maxHeight: "0.5em" }}
                       />
@@ -159,7 +162,8 @@ export default class lessons extends Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-      </div>
+        <Footer />
+      </>
     );
   }
 }

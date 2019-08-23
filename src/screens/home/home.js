@@ -165,7 +165,7 @@ export default class home extends Component {
             </ParallaxLayer>
           </Segment>
           <ParallaxLayer
-            offset={2.5}
+            offset={2.6}
             style={{
               display: "flex",
               alignItems: "center",
