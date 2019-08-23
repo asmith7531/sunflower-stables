@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { Menu } from "semantic-ui-react";
-import Sunflower from "../../../dist/7ca8a91d64dbfb901833a07aabfc2adc.png";
+import Sunflower from "../../../dist/img/sunflower.png";
 export default class navBar extends Component {
   state = { activeItem: "" };
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
