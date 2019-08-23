@@ -1,15 +1,17 @@
 import React, { Component } from "react";
 import { Header, Container } from "semantic-ui-react";
 import Horse from "../../components/horseCard/horseCard";
+import Nigel from "../../../dist/img/nigel.jpg";
 export default class forsale extends Component {
   render() {
     return (
       <Container>
         <Header as="h1">Horses For Sale</Header>
         <Horse
+          img={Nigel}
           name="Nigel"
-          breed="I am not sure what breed he is"
-          description="I dont know how to describe this horse, it looks like a regular horse but this one is black."
+          breed="Registered Quarter Horse"
+          description="Nigel is a beautiful quarter horse standing at 14.4 hands. He is 4 years old, so green but very even tempered. An amatuer riders can  easily ride him. He is registered with the AQHA."
         />
       </Container>
     );
