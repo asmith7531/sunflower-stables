@@ -4,7 +4,7 @@ header {
   align-content: center;
 }
 .landing-image {
-  background-image: url("../../../dist/img/winter.png") !important;
+  background-image: url("../../../dist/img/sunset.jpeg") !important;
   background-size: cover !important;
   min-height: 100vh;
 }

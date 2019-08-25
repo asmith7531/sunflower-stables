@@ -9,6 +9,7 @@ import {
   Image,
   Responsive
 } from "semantic-ui-react";
+import { AwesomeButton } from "react-awesome-button";
 import { Link } from "react-router-dom";
 import Sunflower from "../../../dist/img/sunflower.png";
 export default class footer extends Component {
@@ -42,9 +43,13 @@ export default class footer extends Component {
               </Grid.Column>
               <Grid.Column width={7}>
                 <Header inverted as="h4" content="Social Media" />
-                <p>
-                  This is where I will link all of the social media accounts.
-                </p>
+
+                <AwesomeButton
+                  type="facebook"
+                  href="https://www.facebook.com/pg/Sunflower-Stables-1498044870328263/services/?service_id=2473190119420371&ref=page_internal"
+                >
+                  FaceBook
+                </AwesomeButton>
               </Grid.Column>
             </Grid>
           </Responsive>

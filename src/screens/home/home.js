@@ -88,7 +88,7 @@ export default class home extends Component {
                     </Header>
                     <p style={{ fontSize: "1.33em" }}>
                       We do a little of everything: boarding, lessons, and
-                      sales; but showing off our skills in horse shows is what
+                      sales- but showing off our skills in horse shows is what
                       we love most.
                     </p>
                   </Grid.Column>
@@ -160,12 +160,11 @@ export default class home extends Component {
               <Grid.Row>
                 <Grid.Column floated="left" width={6}>
                   <Header as="h3" className="small">
-                    Come for a visit
+                    Come Visit Us
                   </Header>
                   <p style={{ fontSize: "1.33em" }}>
                     We are located in Reidsville, North Carolina. Fill out our
-                    contact form to schedule a time to visit or to answer any
-                    questions you have for us.
+                    contact form to schedule a time to visit.
                   </p>
                 </Grid.Column>
                 <Responsive minWidth={1010}>
