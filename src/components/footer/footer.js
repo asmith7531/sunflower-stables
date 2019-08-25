@@ -24,21 +24,28 @@ export default class footer extends Component {
           <Responsive minWidth={775}>
             <Grid divided inverted stackable>
               <Grid.Column width={3}>
-                <Header inverted as="h4" content="More" />
+                <Header inverted as="h4" content="Other Links" />
                 <List link inverted>
-                  <List.Item as="a">Link One</List.Item>
-                  <List.Item as="a">Link Two</List.Item>
-                  <List.Item as="a">Link Three</List.Item>
-                  <List.Item as="a">Link Four</List.Item>
+                  <List.Item as="a" href="https://www.aqha.com/">
+                    AQHA
+                  </List.Item>
+                  <List.Item
+                    as="a"
+                    href="https://www.smartpakequine.com/content/basic-horse-care"
+                  >
+                    Basic Horse Care
+                  </List.Item>
+                  <List.Item as="a" />
+                  <List.Item as="a" />
                 </List>
               </Grid.Column>
               <Grid.Column width={2}>
-                <Header inverted as="h4" content="Group 2" />
+                <Header inverted as="h4" content="" />
                 <List link inverted>
-                  <List.Item as="a">Link One</List.Item>
+                  {/* <List.Item as="a">Link One</List.Item>
                   <List.Item as="a">Link Two</List.Item>
                   <List.Item as="a">Link Three</List.Item>
-                  <List.Item as="a">Link Four</List.Item>
+                  <List.Item as="a">Link Four</List.Item> */}
                 </List>
               </Grid.Column>
               <Grid.Column width={7}>
@@ -59,12 +66,12 @@ export default class footer extends Component {
             <List.Item as={Link} to="/contact-us">
               Contact Us
             </List.Item>
-            <List.Item as="a" href="#">
+            {/* <List.Item as="a" href="#">
               Terms and Conditions
             </List.Item>
             <List.Item as="a" href="#">
               Privacy Policy
-            </List.Item>
+            </List.Item> */}
           </List>
         </Container>
       </Segment>

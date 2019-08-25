@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Header, Container, Link } from "semantic-ui-react";
+import { Header, Container, Link, Segment } from "semantic-ui-react";
 import Horse from "../../components/horseCard/horseCard";
 import Nigel from "../../../dist/img/nigel.jpg";
 import Chico from "../../../dist/img/chico.jpeg";
