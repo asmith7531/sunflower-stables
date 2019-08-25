@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Header, Container, Segment, List } from "semantic-ui-react";
+import { Header, Container, Segment } from "semantic-ui-react";
 export default class boarding extends Component {
   render() {
     return (
@@ -34,14 +34,18 @@ export default class boarding extends Component {
           Pasture Boarding is $300 per month.
           <br />
           <h3>Stall Board</h3>
-          <ul>
+          <ul textAlign="left">
             <li>Grain feed minimum twice per day, hay four times.</li>
             <li>Fresh water replenished daily.</li>
             <li>Access to 10 acres of well maintained grazing fields.</li>
             <li>Supplements given as required, owner supplied.</li>
             <li>Heavy Blanketing in the winter, owner supplied.</li>
-            <li>Summer:</li>
+            <li>
+              Brought into the stable at night and as is appropriate to the
+              seasons and weather.
+            </li>
           </ul>
+          Stall Boarding is $400 per month.
         </Container>
       </>
     );
