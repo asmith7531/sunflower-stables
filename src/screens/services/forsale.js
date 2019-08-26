@@ -9,10 +9,10 @@ export default class forsale extends Component {
     return (
       <Container>
         <Header as="h1">For Sale</Header>
-        <Segment>
+        {/* <Segment>
           <Link to="/contact-us">Contact us</Link> for more information or to
           schedule a time to meet them in person.
-        </Segment>
+        </Segment> */}
         <Horse
           img={Nigel}
           name="Nigel"

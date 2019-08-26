@@ -44,13 +44,13 @@ export default class horses extends Component {
               img={Bella}
               name="Bella"
               breed="Thoroughbred"
-              description="Bella is fast as fuck!"
+              description="Bella is Meagan's prized race horse. Rescued from an auction, she is now a competitive eventing horse."
             />
             <Horse
               img={Chico}
               name="Chico"
-              breed="I am not sure??"
-              description="Pretty sure Meagan sold this one."
+              breed="Grade Quarter Horse"
+              description="Chico is a large 14'2 grade quarter horse gelding. He is a proven beginner lesson pony. He has taught many kids various skills from lead line to walk trot, to show jumping. He can go on trail rides, do jumps and lessons, on and off the farm. He is an amazing all around pony at only 4 years old and has the easiest temperment for any level rider."
             />
             <Horse
               img={Leo}
