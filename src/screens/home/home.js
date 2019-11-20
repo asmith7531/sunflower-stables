@@ -78,18 +78,22 @@ export default class home extends Component {
                 <Grid.Row>
                   <Grid.Column width={8}>
                     <Header as="h3" className="small">
-                      Passion Is Why We Ride
+                      Horse Training
                     </Header>
                     <p id="about" style={{ fontSize: "1.33em" }}>
-                      And we don't horse around, we take this to the next level.
+                      Sunflower Stables can fix bad habits such as kicking,
+                      rearing, loading, bucking, catching and biting. We will
+                      teach your old horse new tricks as well as start your
+                      young horse in whichever discipline you ride, English or
+                      Western...
                     </p>
                     <Header as="h3" className="small">
-                      Boarding, Sales, and Lessons
+                      Boarding, Sales, and Riding Riding Lessons
                     </Header>
                     <p style={{ fontSize: "1.33em" }}>
-                      We do a little of everything: boarding, lessons, and
-                      sales- but showing off our skills in horse shows is what
-                      we love most.
+                      We do a little of everything: stable and pasture boarding,
+                      riding lessons, training, and sales- but showing off our
+                      skills in horse shows is what we love most.
                     </p>
                   </Grid.Column>
 
