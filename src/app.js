@@ -10,7 +10,7 @@ export default class App extends Component {
     return (
       <>
         <Router>
-          <NavBar/>
+          <NavBar />
           <Route exact path="/" component={Home} />
           <Route path="/horses" component={Horses} />
           <Route path="/contact-us" component={ContactUs} />

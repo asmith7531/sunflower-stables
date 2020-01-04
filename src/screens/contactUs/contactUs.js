@@ -62,7 +62,6 @@ export default class lessons extends Component {
     ];
     return (
       <>
-        <NavBar />
         <Grid container stackable verticalAlign="middle">
           <Grid.Row>
             <Grid.Column width={8}>

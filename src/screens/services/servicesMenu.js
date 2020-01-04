@@ -4,7 +4,7 @@ import Lessons from "./lessons";
 import ForSale from "./forsale";
 import Boarding from "./boarding";
 export default class services extends Component {
-  state = { activeItem: "Lessons" };
+  state = { activeItem: "Boarding" };
   handleItemClick = (e, { name }) => this.setState({ activeItem: name });
   render() {
     const activeItem = this.state;
