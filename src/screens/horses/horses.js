@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import NavBar from "../../components/navBar/navBar";
 import Horse from "../../components/horseCard/horseCard";
 import Leo from "../../../dist/img/FullSizeRender.jpeg";
 import Chico from "../../../dist/img/chico.jpeg";
@@ -11,7 +10,6 @@ export default class horses extends Component {
   render() {
     return (
       <div>
-        <NavBar />
         <Container className="header">
           <Header
             as="h1"
@@ -44,7 +42,7 @@ export default class horses extends Component {
               img={Bella}
               name="Bella"
               breed="Thoroughbred"
-              description="Bella is Meagan's prized race horse. Rescued from an auction, she is now a competitive eventing horse."
+              description="Bella is Meagan's show mare. She competes in eventing and as a thouroughbred she loves to run fast and jump high!"
             />
             <Horse
               img={Chico}
@@ -61,8 +59,8 @@ export default class horses extends Component {
             <Horse
               img={Nigel}
               name="Nigel"
-              breed="Registered Quarter Horse"
-              description="Nigel is a beautiful quarter horse standing at 14.4 hands. He is 4 years old, so green but very even tempered. An amatuer riders can  easily ride him. He is registered with the AQHA."
+              breed="Registered AQHA Quarter Horse"
+              description="Nigel is a beautiful quarter horse standing at 14.2 hands. He is 5 years old, so green but very even tempered. He is very eager to please and easy to work with under saddle and on the ground. He stands well to be mounted, groomed, and saddled. He is easy to catch in the pasture. Contact us for the asking price."
             />
           </Grid>
         </Container>

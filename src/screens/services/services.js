@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Menu from "./servicesMenu";
 import Horse from "../../../dist/img/nayyy.jpg";
 import { Container, Grid, Header, Image, Responsive } from "semantic-ui-react";
-import NavBar from "../../components/navBar/navBar";
 import Lessons from "./lessons";
 import Board from "./boarding";
 import ForSale from "./forsale";
@@ -11,7 +10,6 @@ export default class services extends Component {
   render() {
     return (
       <>
-        <NavBar />
         <Grid textAlign="center">
           <Grid.Row>
             <Grid.Column width={8}>

@@ -4,11 +4,13 @@ header {
   align-content: center;
 }
 .button-sunflower{
-  justify-content: center !important;
+  justify-content: right !important;
 }
 .landing-image {
   background-image: url("../../../dist/d393781af4753fd6d5adc67371f7f441.jpg") !important;
-  background-size: calc(100%-10px) calc(100%-20px);
+  background-size: cover !important;
+  /* background-size: calc(100%-10px) calc(100%-20px); */
+
   justify-content: right !important;
   /* margin-left: 30% !important; */
 }
@@ -21,4 +23,7 @@ header {
 }
 p {
   font-size: "1.33em" !important;
+}
+#passionTitle{
+  font-size: 3em !important;
 }

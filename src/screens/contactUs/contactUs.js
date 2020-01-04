@@ -140,7 +140,6 @@ export default class lessons extends Component {
                     />
                     <br />
                     <br />
-
                     <AwesomeButton
                       type="primary"
                       onPress={() => this.handleSubmit}

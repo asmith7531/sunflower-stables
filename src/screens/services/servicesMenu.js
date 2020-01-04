@@ -15,17 +15,17 @@ export default class services extends Component {
           <Grid.Column width={3}>
             <Menu fluid vertical tabular stackable>
               <Menu.Item
+                name="Boarding"
+                active={activeItem.activeItem === "Boarding"}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item
                 name="Lessons"
                 active={activeItem.activeItem === "Lessons"}
                 onClick={this.handleItemClick}
               >
                 Riding Lessons
               </Menu.Item>
-              <Menu.Item
-                name="Boarding"
-                active={activeItem.activeItem === "Boarding"}
-                onClick={this.handleItemClick}
-              />
               <Menu.Item
                 name="ForSale"
                 active={activeItem.activeItem === "ForSale"}
