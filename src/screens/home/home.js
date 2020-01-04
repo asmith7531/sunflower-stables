@@ -67,12 +67,12 @@ export default class home extends Component {
                 justifyContent: "center"
               }}
             >
-              <Button onClick={() => this.parallax.scrollTo(0.85)}>
+              <Button onClick={() => this.parallax.scrollTo(1)}>
                 About Us
               </Button>
             </ParallaxLayer>
           </ParallaxLayer>
-          <ParallaxLayer offset={1.0} speed={0.3}>
+          <ParallaxLayer offset={1.2} speed={0.3}>
             <Grid container stackable verticalAlign="middle">
               <Segment compact center raised>
                 <Grid.Row>
